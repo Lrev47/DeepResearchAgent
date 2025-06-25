@@ -1,129 +1,157 @@
-# 🦜️🔗 LangChain + Next.js Starter Template
+# 🔬 ResearchFlow - Next-Generation AI Research Platform
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/langchain-ai/langchain-nextjs-template)
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Flangchain-ai%2Flangchain-nextjs-template)
+<div align="center">
+  <img src="https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js&logoColor=white" />
+  <img src="https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/OpenAI-GPT4-green?style=for-the-badge&logo=openai&logoColor=white" />
+  <img src="https://img.shields.io/badge/Notion-API-black?style=for-the-badge&logo=notion&logoColor=white" />
+  
+  <br/>
+  
+  <p><strong>Built by AISynthLab LLC • Powered by CompanyFactory</strong></p>
+</div>
 
-This template scaffolds a LangChain.js + Next.js starter app. It showcases how to use and combine LangChain modules for several
-use cases. Specifically:
+## ✨ Overview
 
-- [Simple chat](/app/api/chat/route.ts)
-- [Returning structured output from an LLM call](/app/api/chat/structured_output/route.ts)
-- [Answering complex, multi-step questions with agents](/app/api/chat/agents/route.ts)
-- [Retrieval augmented generation (RAG) with a chain and a vector store](/app/api/chat/retrieval/route.ts)
-- [Retrieval augmented generation (RAG) with an agent and a vector store](/app/api/chat/retrieval_agents/route.ts)
+**ResearchFlow** is a cutting-edge AI research platform developed by **AISynthLab LLC** that revolutionizes how you conduct deep research investigations. Powered by **CompanyFactory**, our futuristic glassmorphism interface delivers comprehensive research reports across multiple domains with automatic Notion integration.
 
-Most of them use Vercel's [AI SDK](https://github.com/vercel-labs/ai) to stream tokens to the client and display the incoming messages.
+### 🚀 Key Features
 
-The agents use [LangGraph.js](https://langchain-ai.github.io/langgraphjs/), LangChain's framework for building agentic workflows. They use preconfigured helper functions to minimize boilerplate, but you can replace them with custom graphs as desired.
+- **🧠 Deep Research Agent**: Conducts 6-8 step iterative research like ChatGPT's Deep Research
+- **🔍 Multi-Source Search**: Searches web, arXiv, Google Scholar, and academic databases simultaneously  
+- **📊 Three Export Formats**: Markdown code, professional PDF reports, and Notion workspace delivery
+- **🎨 Futuristic UI**: Modern glassmorphism design with purple/cyan gradients and animations
+- **⚡ Real-time Progress**: Live research step tracking with beautiful progress indicators
+- **💬 AI Chat**: Context-aware research assistance with conversation memory
 
-https://github.com/user-attachments/assets/e389e4e4-4fb9-4223-a4c2-dc002c8f20d3
+### 🎯 Perfect For
 
-It's free-tier friendly too! Check out the [bundle size stats below](#-bundle-size).
+- **Researchers & Academics**: Comprehensive literature reviews and data analysis
+- **Content Creators**: In-depth topic research with professional citations
+- **Business Analysts**: Market research and competitive intelligence
+- **Students**: Academic research with source verification
+- **Consultants**: Client research with automated report generation
 
-You can check out a hosted version of this repo here: https://langchain-nextjs-template.vercel.app/
+## 🏢 About AISynthLab LLC
 
-## 🚀 Getting Started
+**AISynthLab LLC** is a forward-thinking AI company specializing in intelligent research and automation solutions. We build next-generation AI tools that empower professionals, researchers, and businesses to unlock insights faster than ever before.
 
-First, clone this repo and download it locally.
+### Our Mission
+To democratize advanced AI research capabilities and make comprehensive investigation accessible to everyone.
 
-Next, you'll need to set up environment variables in your repo's `.env.local` file. Copy the `.env.example` file to `.env.local`.
-To start with the basic examples, you'll just need to add your OpenAI API key.
+### Our Vision  
+A world where AI-powered research accelerates human knowledge and innovation.
 
-Because this app is made to run in serverless Edge functions, make sure you've set the `LANGCHAIN_CALLBACKS_BACKGROUND` environment variable to `false` to ensure tracing finishes if you are using [LangSmith tracing](https://docs.smith.langchain.com/).
+## 🏭 Powered by CompanyFactory
 
-Next, install the required packages using your preferred package manager (e.g. `yarn`).
+This application is built and deployed using **CompanyFactory** - our comprehensive platform for rapid development and deployment of AI-powered web applications. CompanyFactory enables us to:
 
-Now you're ready to run the development server:
+- **Rapid Prototyping**: From concept to production in weeks, not months
+- **Scalable Infrastructure**: Enterprise-grade hosting and performance
+- **AI Integration**: Seamless connection to multiple AI providers and services
+- **Modern Stack**: Next.js 15, TypeScript, and cutting-edge frameworks
 
-```bash
-yarn dev
-```
+## 🛠️ Tech Stack
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result! Ask the bot something and you'll see a streamed response:
+- **Frontend**: Next.js 15, TypeScript, Tailwind CSS, Framer Motion
+- **AI**: OpenAI GPT-4, LangChain, Custom research agents
+- **Search**: SERP API, arXiv API, Google Scholar integration
+- **Backend**: Next.js API routes, Edge runtime
+- **Database**: Supabase (Vector search & storage)
+- **Authentication**: NextAuth.js with multiple providers
+- **Integrations**: Notion API, PDF generation, Markdown export
+- **Platform**: CompanyFactory deployment and infrastructure
 
-![A streaming conversation between the user and the AI](/public/images/chat-conversation.png)
+## 🎨 Design System
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+ResearchFlow features a modern, futuristic design with:
 
-Backend logic lives in `app/api/chat/route.ts`. From here, you can change the prompt and model, or add other modules and logic.
+- **Glassmorphism Effects**: Translucent cards with backdrop blur
+- **Gradient Themes**: Purple to cyan color palette with dynamic animations
+- **Floating Elements**: Subtle animations and hover effects
+- **Dark-First Design**: Optimized for extended research sessions
+- **Responsive Layout**: Beautiful on desktop, tablet, and mobile
 
-## 🧱 Structured Output
+## 🚀 Quick Start
 
-The second example shows how to have a model return output according to a specific schema using OpenAI Functions.
-Click the `Structured Output` link in the navbar to try it out:
+1. **Clone & Install**
+   ```bash
+   git clone https://github.com/aisynthlab/research-flow
+   cd research-flow
+   npm install
+   ```
 
-![A streaming conversation between the user and an AI agent](/public/images/structured-output-conversation.png)
+2. **Environment Setup**
+   ```bash
+   cp .env.example .env.local
+   # Add your API keys (see SETUP_GUIDE.md)
+   ```
 
-The chain in this example uses a [popular library called Zod](https://zod.dev) to construct a schema, then formats it in the way OpenAI expects.
-It then passes that schema as a function into OpenAI and passes a `function_call` parameter to force OpenAI to return arguments in the specified format.
+3. **Run Development Server**
+   ```bash
+   npm run dev
+   ```
 
-For more details, [check out this documentation page](https://js.langchain.com/docs/how_to/structured_output).
+4. **Visit** `http://localhost:3000`
 
-## 🦜 Agents
+## 📖 Usage
 
-To try out the agent example, you'll need to give the agent access to the internet by populating the `SERPAPI_API_KEY` in `.env.local`.
-Head over to [the SERP API website](https://serpapi.com/) and get an API key if you don't already have one.
+### Deep Research Workflow
 
-You can then click the `Agent` example and try asking it more complex questions:
+1. **Ask Your Question**: Enter any research topic
+2. **Choose Depth**: Quick (10min), Standard (15min), or Comprehensive (25min)
+3. **AI Investigates**: Watch real-time progress as AI conducts multi-step research
+4. **Get Your Report**: Receive professional reports in multiple formats
 
-![A streaming conversation between the user and an AI agent](/public/images/agent-conversation.png)
+### Export Options
 
-This example uses a [prebuilt LangGraph agent](https://langchain-ai.github.io/langgraphjs/tutorials/quickstart/), but you can customize your own as well.
+- **📋 Markdown Code**: Copy to clipboard or download .md file
+- **📄 PDF Report**: Professional formatted report with citations
+- **📝 Notion Integration**: Automatic delivery to your Notion workspace
 
-## 🐶 Retrieval
+## 🌟 Screenshots
 
-The retrieval examples both use Supabase as a vector store. However, you can swap in
-[another supported vector store](https://js.langchain.com/docs/integrations/vectorstores) if preferred by changing
-the code under `app/api/retrieval/ingest/route.ts`, `app/api/chat/retrieval/route.ts`, and `app/api/chat/retrieval_agents/route.ts`.
+*Coming soon - showcase of the beautiful glassmorphism interface*
 
-For Supabase, follow [these instructions](https://js.langchain.com/docs/integrations/vectorstores/supabase) to set up your
-database, then get your database URL and private key and paste them into `.env.local`.
+## 🔧 Configuration
 
-You can then switch to the `Retrieval` and `Retrieval Agent` examples. The default document text is pulled from the LangChain.js retrieval
-use case docs, but you can change them to whatever text you'd like.
+See `SETUP_GUIDE.md` for detailed setup instructions including:
+- API key configuration
+- Notion workspace setup
+- Database initialization
+- Environment variables
 
-For a given text, you'll only need to press `Upload` once. Pressing it again will re-ingest the docs, resulting in duplicates.
-You can clear your Supabase vector store by navigating to the console and running `DELETE FROM documents;`.
+## 🤝 Contributing
 
-After splitting, embedding, and uploading some text, you're ready to ask questions!
+We welcome contributions from the research and developer community! Please read our contributing guidelines and submit pull requests.
 
-For more info on retrieval chains, [see this page](https://js.langchain.com/docs/tutorials/rag).
-The specific variant of the conversational retrieval chain used here is composed using LangChain Expression Language, which you can
-[read more about here](https://js.langchain.com/docs/how_to/qa_sources/). This chain example will also return cited sources
-via header in addition to the streaming response.
+For enterprise partnerships or custom development, contact us at: **hello@aisynthlab.com**
 
-For more info on retrieval agents, [see this page](https://langchain-ai.github.io/langgraphjs/tutorials/rag/langgraph_agentic_rag/).
+## 📄 License
 
-## 📦 Bundle size
+MIT License - see LICENSE file for details.
 
-The bundle size for LangChain itself is quite small. After compression and chunk splitting, for the RAG use case LangChain uses 37.32 KB of code space (as of [@langchain/core 0.1.15](https://npmjs.com/package/@langchain/core)), which is less than 4% of the total Vercel free tier edge function alottment of 1 MB:
+## 🎯 Roadmap
 
-![](/public/images/bundle-size.png)
+- [ ] Voice input for research queries
+- [ ] Collaborative research workspaces
+- [ ] Advanced visualization tools
+- [ ] Mobile app development
+- [ ] Integration with more research databases
+- [ ] Enterprise team features
+- [ ] API access for developers
 
-This package has [@next/bundle-analyzer](https://www.npmjs.com/package/@next/bundle-analyzer) set up by default - you can explore the bundle size interactively by running:
+## 📞 Contact & Support
 
-```bash
-$ ANALYZE=true yarn build
-```
+- **Website**: [aisynthlab.com](https://aisynthlab.com)
+- **Email**: hello@aisynthlab.com
+- **Twitter**: [@AISynthLab](https://twitter.com/aisynthlab)
+- **LinkedIn**: [AISynthLab LLC](https://linkedin.com/company/aisynthlab)
 
-## 📚 Learn More
+---
 
-The example chains in the `app/api/chat/route.ts` and `app/api/chat/retrieval/route.ts` files use
-[LangChain Expression Language](https://js.langchain.com/docs/concepts#langchain-expression-language) to
-compose different LangChain.js modules together. You can integrate other retrievers, agents, preconfigured chains, and more too, though keep in mind
-`HttpResponseOutputParser` is meant to be used directly with model output.
-
-To learn more about what you can do with LangChain.js, check out the docs here:
-
-- https://js.langchain.com/docs/
-
-## ▲ Deploy on Vercel
-
-When ready, you can deploy your app on the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme).
-
-Check out the [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-## Thank You!
-
-Thanks for reading! If you have any questions or comments, reach out to us on Twitter
-[@LangChainAI](https://twitter.com/langchainai), or [click here to join our Discord server](https://discord.gg/langchain).
+<div align="center">
+  <p><strong>Built with ❤️ by AISynthLab LLC</strong></p>
+  <p><em>Powered by CompanyFactory • Making AI research accessible to everyone</em></p>
+  <p>⭐ Star this repo if you find it useful!</p>
+</div>
