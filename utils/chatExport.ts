@@ -128,7 +128,7 @@ export function generateConversationSummary(messages: any[]): string {
   const topics = userMessages.map(msg => {
     // Extract key topics from user messages (simplified)
     const words = msg.content.toLowerCase().split(' ');
-    return words.filter(word => word.length > 5).slice(0, 3);
+    return words.filter((word: string) => word.length > 5).slice(0, 3);
   }).flat();
 
   const uniqueTopics = [...new Set(topics)].slice(0, 5);

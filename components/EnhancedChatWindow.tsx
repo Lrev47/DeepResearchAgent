@@ -258,6 +258,7 @@ export function ChatInput(props: ChatInputProps) {
         multiple
         accept=".txt,.pdf,.doc,.docx,.md"
         className="hidden"
+        aria-label="Upload files"
         onChange={(e) => {
           if (e.target.files && props.onFileUpload) {
             props.onFileUpload(e.target.files);
@@ -329,6 +330,7 @@ export function EnhancedChatWindow({
       reaction: enhancedMessages.find(em => em.id === msg.id)?.reaction || null,
     }));
     setEnhancedMessages(enhanced);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [messages]);
 
   // Show typing indicator when loading
@@ -451,7 +453,7 @@ export function EnhancedChatWindow({
               <DialogHeader>
                 <DialogTitle>Upload Documents</DialogTitle>
                 <DialogDescription>
-                  Upload documents to enhance the AI's knowledge for this conversation.
+                  Upload documents to enhance the AI&apos;s knowledge for this conversation.
                 </DialogDescription>
               </DialogHeader>
               <UploadDocumentsForm />

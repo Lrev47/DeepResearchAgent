@@ -7,12 +7,14 @@ import Link from "next/link";
 
 export const ActiveLink = (props: { href: string; children: ReactNode }) => {
   const pathname = usePathname();
+  const isActive = pathname === props.href;
+  
   return (
     <Link
       href={props.href}
       className={cn(
-        "px-4 py-2 rounded-[18px] whitespace-nowrap flex items-center gap-2 text-sm transition-all",
-        pathname === props.href && "bg-primary text-primary-foreground",
+        "nav-link",
+        isActive && "active"
       )}
     >
       {props.children}
